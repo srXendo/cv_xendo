@@ -1,30 +1,18 @@
 <div class="wrapper_main">
     <app-tools-box [arr_elements]="contact" (arrChange)="change_arr($event)" [name_download]="'contact'"></app-tools-box>
     <div class="img-btn-bar">
-        <div class="wrapper-img-btn"[class]="{
-            'wrapper-img-btn-active': false,
-            }">
+        <div class="wrapper-img-btn">
         <div
             class="img-btn-base"
-            [class]="{
-            'img-btn': false,
-            'img-btn-active': false,
-            }"
             [style]="getImgBoxStyle('linkedIn_2021.svg')"
             (click)="open_url('linkedin_link')"
         >
         </div>
             <span class="overlay-text"></span>
         </div>
-        <div class="wrapper-img-btn"[class]="{
-            'wrapper-img-btn-active': false,
-            }">
+        <div class="wrapper-img-btn">
         <div
             class="img-btn-base"
-            [class]="{
-            'img-btn': false,
-            'img-btn-active': false,
-            }"
             [style]="getImgBoxStyle('github_2013.svg')"
             (click)="open_url('github_link')"
         >

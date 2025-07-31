@@ -17,15 +17,14 @@ export class Contact {
     return { 'background-image': 'url(' + img + ')' };
   }
   change_arr($event: any){
-    console.log('import data contact', $event)
     this.contact = $event
 
   }
   open_url(linkKey: keyof ContactInterface){
     // your logic here.... like set the url 
-    console.log(linkKey)
+
     const url = this.contact[linkKey]
-    console.log(url)
+
     window.open(url, '_blank');
   }
 }

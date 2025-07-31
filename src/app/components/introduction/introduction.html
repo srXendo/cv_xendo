@@ -2,11 +2,9 @@
   <app-tools-box [arr_elements]="introduction" (arrChange)="change_arr($event)" [name_download]="'presentation'"></app-tools-box>
   <div class="wrapper_presentation">
     <div class="content_presentation">
-      <span class="title_presentation">{{introduction.title_introduction}}</span>
-      @for(presentation of introduction.arr_presentation; track presentation){
-        <p class="text_presentation">
-          {{presentation}}
-        </p>
+      <span class="title_presentation" [innerHTML]="public_introduction.title_introduction"></span>
+      @for(presentation of public_introduction.arr_presentation; track presentation){
+        <p class="text_presentation" [innerHTML]="presentation"></p>
       }
     </div>
   </div>

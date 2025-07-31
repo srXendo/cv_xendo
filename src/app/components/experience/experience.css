@@ -8,9 +8,6 @@
     justify-content: center;
 }
 
-
-
-
 .content_experience{
     min-width: 340px;
     width: 70%;
@@ -39,5 +36,5 @@
 }
 .wrapper_description{
     text-align: left;
-
+    white-space: pre-line;
 }

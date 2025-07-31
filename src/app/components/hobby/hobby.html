@@ -3,9 +3,8 @@
   <div class="wrapper_hobby">
     <div class="content_hobby">
       <span class="title_hobby">{{hobby.title_hobby}}</span>
-      @for(hobby_row of hobby.arr_hobby; track hobby_row){
-        <p class="text_hobby">
-          {{hobby_row}}
+      @for(hobby_row of public_hobby.arr_hobby; track hobby_row){
+        <p class="text_hobby" [innerHTML]="hobby_row">
         </p>
       }
     </div>
