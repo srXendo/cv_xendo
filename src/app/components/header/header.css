@@ -45,7 +45,7 @@
     min-width: 340px;
     width: auto;
     max-width: 100%;
-    height: -webkit-fill-available;
+    height: auto;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
