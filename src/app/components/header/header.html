@@ -1,7 +1,7 @@
 @if(arr_headers$ | async; as arr_headers){
     @if(url$ | async; as url){
         <header class="header">
-            <div class="wrapper_picture_name">
+            <div class="wrapper_picture_name" (click)="open_url('http://localhost:4200')">
                 <div class="content_picture"></div>
                 <div class="content_name">
                     Sr Xendo

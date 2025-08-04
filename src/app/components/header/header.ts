@@ -37,4 +37,8 @@ export class Header {
 
 
   }
+  open_url(url: string){
+    // your logic here.... like set the url 
+    window.open(url);
+  }
 }
