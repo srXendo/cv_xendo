@@ -36,7 +36,7 @@ export class Introduction {
   }
   sanitizeHTML(raw: string): string {
     return raw
-      .replace(/<(?!\/?(strong|em|br)\b)[^>]*>/gi, '')
+      .replace(/<(?!\/?(strong|em|br|a)\b)[^>]*>/gi, '')
       .replace(/on\w+="[^"]*"/gi, '');
   }
 }
