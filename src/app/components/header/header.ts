@@ -11,7 +11,7 @@ import { ActivatedRoute, NavigationEnd, Router, UrlSegment } from '@angular/rout
   styleUrl: './header.css'
 })
 export class Header {
-  arr_headers$: Observable<HeaderInterface[]> = of([
+  arr_headers: HeaderInterface[] = [
     {
       title_header: "Presentación",
       path_header: "introduction"
@@ -28,14 +28,17 @@ export class Header {
       title_header: "Contacto",
       path_header: "contact"
     },
-  ])
-  url$: Observable<string>;
+  ]
+  url$?: Observable<string>;
   constructor(private router: Router){
+
+
+
+  }
+  OnInit(){
     this.url$ = this.router.events.pipe(filter(event => event instanceof NavigationEnd)).pipe(map(event=>{
       return event.url
     }))
-
-
   }
   open_url(url: string){
     // your logic here.... like set the url 

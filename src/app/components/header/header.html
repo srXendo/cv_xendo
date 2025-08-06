@@ -1,5 +1,4 @@
-@if(arr_headers$ | async; as arr_headers){
-    @if(url$ | async; as url){
+
         <header class="header">
             <a class="wrapper_picture_name" href="https://srXendo.github.io">
                 <div class="content_picture"></div>
@@ -12,13 +11,16 @@
                 <li>
                     @for(header of arr_headers; track header.title_header){
                         <ul [ngClass]='{
-                            "ul_pemanent_permanent": "/"+header.path_header === url
+                            "ul_pemanent_permanent": "/"+header.path_header === "tttt"
                         }'>
                             <a [href]="header.path_header">{{header.title_header}}</a>
                         </ul>
                     }   
                 </li>
             </nav>
+            <div class="wrapper_picture_name" href="https://srXendo.github.io">
+                <span>https://srxendo.github.io/</span>
+            </div>
         </header>
-    }
-}
+    
+
