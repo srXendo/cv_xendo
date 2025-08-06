@@ -23,7 +23,7 @@
 }
 .content_picture{
     min-width: 50px;
-    width: 45%;
+
     min-height: 50px;
     height: auto;
     background-position: center;
@@ -47,7 +47,8 @@
     min-width: 340px;
     width: auto;
     max-width: 100%;
-    height: auto;
+    height: 50px;
+    min-height: 50px;
     display: flex;
     flex-flow: row wrap;
     align-items: center;

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { HeaderInterface } from './header.interface';
 import { filter, map, Observable, of } from 'rxjs';
 import { CommonModule } from '@angular/common';
@@ -8,9 +8,10 @@ import { ActivatedRoute, NavigationEnd, Router, UrlSegment } from '@angular/rout
   selector: 'app-header',
   imports: [CommonModule],
   templateUrl: './header.html',
-  styleUrl: './header.css'
+  styleUrl: './header.css',
+  host: {ngSkipHydration: 'true'},
 })
-export class Header {
+export class Header implements AfterViewInit{
   arr_headers: HeaderInterface[] = [
     {
       title_header: "Presentación",
@@ -29,16 +30,19 @@ export class Header {
       path_header: "contact"
     },
   ]
-  url$?: Observable<string>;
+  url: string = '/'
   constructor(private router: Router){
-
-
+    this.router.events.pipe(filter(event => event instanceof NavigationEnd)).pipe(map(event=>{
+      return event.url
+    })).subscribe({next: (url: string)=>{
+      this.url = url
+    }})
+  }
+  ngAfterViewInit(){
 
   }
   OnInit(){
-    this.url$ = this.router.events.pipe(filter(event => event instanceof NavigationEnd)).pipe(map(event=>{
-      return event.url
-    }))
+
   }
   open_url(url: string){
     // your logic here.... like set the url 
