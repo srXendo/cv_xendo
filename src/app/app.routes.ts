@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { Routes, withHashLocation } from '@angular/router';
 import { Introduction } from './components/introduction/introduction';
 import { Experience } from './components/experience/experience';
 import { RootPath } from './components/root-path/root-path';
@@ -12,3 +12,12 @@ export const routes: Routes = [
     { path: 'contact', component: Contact},
 
 ];
+import { provideRouter } from '@angular/router';
+import { ApplicationConfig } from '@angular/core';
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideRouter(routes, withHashLocation())
+    
+  ]
+};

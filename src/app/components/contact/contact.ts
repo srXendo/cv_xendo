@@ -14,7 +14,7 @@ export class Contact {
     github_link: "https://github.com/srXendo?tab=repositories"
   }
   getImgBoxStyle(img: string) {
-    return { 'background-image': 'url(' + img + ')' };
+    return { 'background-image': 'url(assets/' + img + ')' };
   }
   change_arr($event: any){
     this.contact = $event

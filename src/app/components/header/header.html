@@ -13,7 +13,7 @@
                 <ul [ngClass]='{
                     "ul_pemanent_permanent": "/"+header.path_header === url
                 }'>
-                    <a [href]="header.path_header">{{header.title_header}}</a>
+                    <a [href]="'/#/'+header.path_header">{{header.title_header}}</a>
                 </ul>
             }   
         </li>

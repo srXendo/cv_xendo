@@ -38,14 +38,14 @@
 
 }
 .import{
-    background-image: url(./../../../../public/import.svg);
+    background-image: url(./../../../../src/assets/import.svg);
 }
 .export{
-    background-image: url(./../../../../public/export.svg);
+    background-image: url(./../../../../src/assets/export.svg);
 }
 .ascending{
-    background-image: url(./../../../../public/ascending.svg);
+    background-image: url(./../../../../src/assets/ascending.svg);
 }
 .descending{ 
-    background-image: url(./../../../../public/descending.svg);
+    background-image: url(./../../../../src/assets/descending.svg);
 }

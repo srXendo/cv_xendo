@@ -46,6 +46,6 @@ export class Header implements AfterViewInit{
   }
   open_url(url: string){
     // your logic here.... like set the url 
-    window.open(url);
+    window.open('#'+url);
   }
 }
